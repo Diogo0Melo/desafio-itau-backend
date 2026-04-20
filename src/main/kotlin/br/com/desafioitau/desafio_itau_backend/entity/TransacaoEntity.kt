@@ -6,16 +6,14 @@ import jakarta.persistence.GenerationType
 import jakarta.persistence.Id
 import java.math.BigDecimal
 import java.time.OffsetDateTime
-import java.time.OffsetTime
 import java.util.UUID
 
 @Entity(name = "transacao")
-data class Transacao(
+data class TransacaoEntity(
 
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
-    private val id: UUID,
-    private val valor: BigDecimal,
-    private val dataHora: OffsetDateTime
+    val id: UUID = UUID.randomUUID(),
+    val valor: BigDecimal,
+    val dataHora: OffsetDateTime
 
 )
