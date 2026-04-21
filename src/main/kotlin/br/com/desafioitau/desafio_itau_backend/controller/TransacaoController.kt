@@ -23,13 +23,14 @@ class TransacaoController(
 
         return ResponseEntity.status(201).body(resultado)
     }
+
     @DeleteMapping
-    fun deletarTudo(): ResponseEntity<String>{
+    fun deletarTudo(): ResponseEntity<String> {
         val resposta: Map<Map<String, Boolean>, Map<String, String>> = service.limpar()
         val resultado = resposta.keys.first().getValue("resultado")
         val mensagem = resposta.values.first().getValue("mensagem")
 
-        return when (resultado){
+        return when (resultado) {
             true -> ResponseEntity.ok().body(mensagem)
             false -> ResponseEntity.badRequest().body(mensagem)
         }

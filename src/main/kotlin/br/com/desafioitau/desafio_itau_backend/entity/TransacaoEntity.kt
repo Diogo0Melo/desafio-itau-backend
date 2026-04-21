@@ -10,10 +10,8 @@ import java.util.UUID
 
 @Entity(name = "transacao")
 data class TransacaoEntity(
-
     @Id
     val id: UUID = UUID.randomUUID(),
     val valor: BigDecimal,
     val dataHora: OffsetDateTime
-
 )

@@ -1,11 +1,12 @@
 package br.com.desafioitau.desafio_itau_backend.repository.impl
 
 import br.com.desafioitau.desafio_itau_backend.entity.TransacaoEntity
-import br.com.desafioitau.desafio_itau_backend.repository.ITransacaoRepository
+import br.com.desafioitau.desafio_itau_backend.repository.IRepository
 import org.springframework.stereotype.Repository
+import java.time.OffsetDateTime
 
 @Repository
-class TransacaoRepositoryMemoryImpl: ITransacaoRepository {
+class RepositoryMemoryImpl : IRepository {
 
     private val dados = mutableListOf<TransacaoEntity>()
 
@@ -19,11 +20,9 @@ class TransacaoRepositoryMemoryImpl: ITransacaoRepository {
         return dados.isEmpty()
     }
 
-    override fun buscarTodos(): List<TransacaoEntity> = dados.toList()
-
-    override fun buscarPorId(id: Long): TransacaoEntity? {
-        TODO()
+    override fun buscar(): List<TransacaoEntity> {
+        val dataHoraAtual = OffsetDateTime.now()
+        val transacoes = dados.filter { dataHoraAtual.minusSeconds(60).isBefore(it.dataHora) }
+        return transacoes
     }
-
-
 }
