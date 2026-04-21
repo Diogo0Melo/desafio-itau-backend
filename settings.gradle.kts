@@ -1,1 +1,1 @@
-rootProject.name = "desafio_itau_backend"
+rootProject.name = "desafio_api_transacoes"
