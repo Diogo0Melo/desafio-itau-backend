@@ -1,4 +1,4 @@
-package br.com.desafioitau.desafio_itau_backend.dto
+package br.com.desafioitau.desafio_itau_backend.dto.response
 
 import java.math.BigDecimal
 import java.time.OffsetDateTime
