@@ -5,4 +5,6 @@ import br.com.desafioitau.desafio_itau_backend.dto.response.TransacaoResponseDTO
 
 interface ITransacaoService {
     fun salvarTransacao(dto: TransacaoRequestDTO): TransacaoResponseDTO
+
+    fun limpar(): Map<Map<String, Boolean>, Map<String, String>>
 }

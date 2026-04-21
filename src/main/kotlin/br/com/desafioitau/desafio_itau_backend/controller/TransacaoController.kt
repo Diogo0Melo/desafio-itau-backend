@@ -3,9 +3,9 @@ package br.com.desafioitau.desafio_itau_backend.controller
 import br.com.desafioitau.desafio_itau_backend.dto.request.TransacaoRequestDTO
 import br.com.desafioitau.desafio_itau_backend.dto.response.TransacaoResponseDTO
 import br.com.desafioitau.desafio_itau_backend.service.ITransacaoService
-import br.com.desafioitau.desafio_itau_backend.service.impl.TransacaoServiceImpl
 import jakarta.validation.Valid
 import org.springframework.http.ResponseEntity
+import org.springframework.web.bind.annotation.DeleteMapping
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
@@ -22,5 +22,16 @@ class TransacaoController(
         val resultado = service.salvarTransacao(dto)
 
         return ResponseEntity.status(201).body(resultado)
+    }
+    @DeleteMapping
+    fun deletarTudo(): ResponseEntity<String>{
+        val resposta: Map<Map<String, Boolean>, Map<String, String>> = service.limpar()
+        val resultado = resposta.keys.first().getValue("resultado")
+        val mensagem = resposta.values.first().getValue("mensagem")
+
+        return when (resultado){
+            true -> ResponseEntity.ok().body(mensagem)
+            false -> ResponseEntity.badRequest().body(mensagem)
+        }
     }
 }

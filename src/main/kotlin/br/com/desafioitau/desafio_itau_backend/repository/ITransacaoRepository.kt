@@ -6,4 +6,5 @@ interface ITransacaoRepository {
     fun salvar(transacao: TransacaoEntity): TransacaoEntity
     fun buscarTodos(): List<TransacaoEntity>
     fun buscarPorId(id: Long): TransacaoEntity?
+    fun limpar(): Boolean
 }

@@ -14,9 +14,16 @@ class TransacaoRepositoryMemoryImpl: ITransacaoRepository {
         return transacao
     }
 
+    override fun limpar(): Boolean {
+        dados.clear()
+        return dados.isEmpty()
+    }
+
     override fun buscarTodos(): List<TransacaoEntity> = dados.toList()
 
     override fun buscarPorId(id: Long): TransacaoEntity? {
         TODO()
     }
+
+
 }
