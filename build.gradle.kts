@@ -6,7 +6,7 @@ plugins {
 	kotlin("plugin.jpa") version "1.9.25"
 }
 
-group = "br.com.desafioitau"
+group = "br.com.ogos.desafioapitransacoes"
 version = "0.0.1-SNAPSHOT"
 
 java {

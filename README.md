@@ -1,6 +1,6 @@
-# [🏦 Desafio Itaú - Backend](./INSTRUCTIONS.md)
+# [🏦 Desafio API Transações](./INSTRUCTIONS.md)
 
-<img width="1920" height="1080" alt="ApiDesafioItauBackEnd" src="https://github.com/user-attachments/assets/60b40b01-1fa9-485e-aa5a-f5ba74212531" />
+<img width="1920" height="1080" alt="DesafioApiTransacoes" src="https://github.com/user-attachments/assets/60b40b01-1fa9-485e-aa5a-f5ba74212531" />
 
 API REST em Kotlin e Spring Boot para processamento de transações e cálculo de estatísticas em tempo real com armazenamento em memória.
 
@@ -71,14 +71,14 @@ Este projeto foi desenvolvido como um exercício prático para consolidar conhec
 ### 🛠️ Rodando o Projeto via IDE (Recomendado)
 1. **Clone o repositório** para a sua máquina:
    ```bash
-   git clone https://github.com/diogo0melo/desafio-itau-backend.git
+   git clone https://github.com/Diogo0Melo/desafio-api-transacoes.git
    ```
 2. **Abra o projeto na sua IDE**:
-   * No IntelliJ IDEA, vá em `File > Open...` e selecione a pasta `desafio-itau-backend` que você acabou de clonar.
+   * No IntelliJ IDEA, vá em `File > Open...` e selecione a pasta `desafio-api-transacoes` que você acabou de clonar.
    * Aguarde a IDE sincronizar o projeto com o Gradle e baixar todas as dependências.
 3. **Execute a aplicação**:
-   * Encontre a classe principal da aplicação, nomeada `DesafioItauBackendApplication.kt`.
-   * Clique com o botão direito no arquivo e selecione a opção **"Run 'DesafioItauBackendApplication.kt'"**.
+   * Encontre a classe principal da aplicação, nomeada `DesafioApiTransacoesApplication.kt`.
+   * Clique com o botão direito no arquivo e selecione a opção **"Run 'DesafioApiTransacoesApplication.kt'"**.
 4. **Verifique a execução**:
    * O console da IDE mostrará os logs de inicialização do Spring Boot. A API estará rodando localmente na porta padrão `8080`.
 5. **Teste a API**:
